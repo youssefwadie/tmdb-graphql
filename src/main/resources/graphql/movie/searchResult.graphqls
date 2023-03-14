@@ -1,0 +1,29 @@
+type SearchResponse {
+    page: Int
+    results: [SearchResult]
+    totalPages: Int
+    totalResults: Int
+}
+
+type SearchResult {
+    id: ID
+    title: String
+    adult: Boolean
+
+    genreIds: [Int]
+
+    originalLanguage: String
+    originalTitle: String
+
+    overview: String
+    popularity: BigDecimal
+
+    backdropPath: String
+    posterPath: String
+
+    releaseDate: Date
+    video: Boolean
+    voteAverage: BigDecimal
+    voteCount: Int
+}
+

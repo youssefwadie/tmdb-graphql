@@ -1,0 +1,7 @@
+scalar Date
+scalar BigDecimal
+
+type Query {
+    search(keyword: String): SearchResponse
+    movieById(id: ID!): Movie
+}

@@ -1,0 +1,9 @@
+app:
+  themoviedb:
+    api-base-url: https://api.themoviedb.org/3
+    api-key: <api-key>
+
+spring:
+  graphql:
+    graphiql:
+      enabled: true

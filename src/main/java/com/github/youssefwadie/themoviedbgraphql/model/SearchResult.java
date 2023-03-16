@@ -17,9 +17,11 @@ public class SearchResult {
 
     @JsonProperty("adult")
     private boolean adult;
-
+    // to be used in batch
     @JsonProperty("genre_ids")
     private List<Integer> genreIds;
+
+    private List<Genre> genres;
 
     @JsonProperty("original_language")
     private String originalLanguage;

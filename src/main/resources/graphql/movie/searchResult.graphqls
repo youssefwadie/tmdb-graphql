@@ -10,7 +10,8 @@ type SearchResult {
     title: String
     adult: Boolean
 
-    genreIds: [Int]
+
+    genres: [Genre]
 
     originalLanguage: String
     originalTitle: String

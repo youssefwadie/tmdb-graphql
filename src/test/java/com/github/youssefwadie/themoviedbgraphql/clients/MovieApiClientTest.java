@@ -1,6 +1,6 @@
-package com.github.youssefwadie.themoviedbgraphql.service;
+package com.github.youssefwadie.themoviedbgraphql.clients;
 
-import com.github.youssefwadie.themoviedbgraphql.service.impl.MovieServiceImpl;
+import com.github.youssefwadie.themoviedbgraphql.clients.impl.MovieApiClientImpl;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,9 +16,9 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
  * Nothing to test, really ... but to be safe
  */
 @ExtendWith(MockitoExtension.class)
-class MovieServiceTest {
+class MovieApiClientTest {
 
-    private MovieService underTest;
+    private MovieApiClient underTest;
     private MockWebServer mockWebServer;
 
 
@@ -26,7 +26,7 @@ class MovieServiceTest {
     public void init() {
         mockWebServer = new MockWebServer();
         var webClient = WebClient.create("http://localhost:%d".formatted(mockWebServer.getPort()));
-        underTest = new MovieServiceImpl(webClient);
+        underTest = new MovieApiClientImpl(webClient);
     }
 
     @Test

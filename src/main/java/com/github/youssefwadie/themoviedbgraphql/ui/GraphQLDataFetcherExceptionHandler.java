@@ -1,4 +1,4 @@
-package com.github.youssefwadie.themoviedbgraphql.controller;
+package com.github.youssefwadie.themoviedbgraphql.ui;
 
 import graphql.GraphQLError;
 import graphql.GraphqlErrorBuilder;

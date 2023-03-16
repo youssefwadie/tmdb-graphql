@@ -2,6 +2,6 @@ scalar Date
 scalar BigDecimal
 
 type Query {
-    search(keyword: String): SearchResponse
+    movies(keyword: String!, page: Int, includeAdult: Boolean, region: String, year: Int, primaryReleaseYear: Int): SearchResponse!
     movieById(id: ID!): Movie
 }
